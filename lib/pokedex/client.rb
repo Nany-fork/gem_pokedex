@@ -4,7 +4,7 @@ require "json"
 
 module Pokedex
     class Client
-        def init (base_url)
+        def initialize (base_url)
             @base_url = base_url
         end
         
@@ -17,5 +17,8 @@ module Pokedex
                 JSON.parse(res.body, symbolize_names: true)
             end
          end
+
+         private 
+         attr_reader :base_url
     end
 end
