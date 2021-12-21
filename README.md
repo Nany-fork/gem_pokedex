@@ -61,4 +61,5 @@ also your favortite pokemon typing his/her name or if you are connoisseur of the
      $get_pokemon(name or id)
 
 or a random pokemon, there are more than 500 pokemons , Which one do you think will come out?
+     
      $get_randmon_pokemon
