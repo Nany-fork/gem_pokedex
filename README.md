@@ -41,3 +41,21 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Pokedex project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pokedex/blob/master/CODE_OF_CONDUCT.md).
+
+
+## Gem behavior
+
+You can keep learning about the pokemons and their abilities and types
+
+
+try to get the abilities of many pokemons
+
+    $get_abilities_pokemons(id)
+
+you can get the type of many pokemon
+
+     $get_type_pokemons(id)
+
+also your favortite pokemon typing his/her name or if you are connoisseur of the subject typing the number of the pokemon wich abilities and moves
+
+     $get_pokemon(name or id)
