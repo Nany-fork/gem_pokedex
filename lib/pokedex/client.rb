@@ -14,7 +14,16 @@ module Pokedex
             if !res.is_a?(Net::HTTPSuccess)
                 return 'Please check your request path'
             else 
-                JSON.parse(res.body, symbolize_names: true)
+              if path['pokemon']
+                result = JSON.parse(res.body)
+                filter = {'Nombre' => result['name'],'Movimientos' => result['abilities']}
+              elsif path['type']
+                result = JSON.parse(res.body)
+                filter = {'Type' => result['name'],'pokemones' => result['pokemon']}
+              elsif path['ability']
+                result = JSON.parse(res.body)
+                filter = {'Ability type' => result['name'],'pokemones' => result['pokemon']}
+              end 
             end
          end
 
