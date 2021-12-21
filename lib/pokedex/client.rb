@@ -16,7 +16,7 @@ module Pokedex
             else 
               if path['pokemon']
                 result = JSON.parse(res.body)
-                filter = {'Nombre' => result['name'],'Movimientos' => result['abilities']}
+                filter = {'Nombre' => result['name'],'Habilidades' => result['abilities']}
               elsif path['type']
                 result = JSON.parse(res.body)
                 filter = {'Type' => result['name'],'pokemones' => result['pokemon']}
