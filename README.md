@@ -44,17 +44,21 @@ You can keep learning about the pokemons and their abilities and types
 
 
 try to get the abilities of many pokemons
-
-    $get_abilities_pokemons(id)
+    
+    $pokemon = Pokedex::Skills.new
+    $pokemon.ability(id)
 
 you can get the type of many pokemon
-
-     $get_type_pokemons(id)
+    
+     $pokemon = Pokedex::Skills.new
+     $pokemon.type(id)
 
 also your favortite pokemon typing his/her name or if you are connoisseur of the subject typing the number of the pokemon wich abilities and moves
 
-     $get_pokemon(name or id)
+     $result = Pokedex::Pokemon.new
+     $result.pokemon(name or id)
 
 or a random pokemon, there are more than 500 pokemons , Which one do you think will come out?
      
-     $get_randmon_pokemon
+     $result = Pokedex::Pokemon.new
+     $result.randmon
