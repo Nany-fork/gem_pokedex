@@ -88,10 +88,10 @@ for skills is the same but the filter change a little bit, nex are the available
      $pokemon = Pokedex::Skills.new
      $pokemon.type(id, filter)
 
--game_indices
--moves
--names
--pokemon
+- game_indices
+- moves
+- names
+- pokemon
 
 for default if no filter is assigned the result are the name and the pokemon that have the same type 
 
@@ -100,9 +100,9 @@ for default if no filter is assigned the result are the name and the pokemon tha
      $pokemon = Pokedex::Skills.new
      $pokemon.ability(id, filter)
 
--flavor_text_entries
--effect_entries
--names
--pokemon
+- flavor_text_entries
+- effect_entries
+- names
+- pokemon
 
 for default if no filter is assigned the result are the name and the pokemon that have the same ability 
