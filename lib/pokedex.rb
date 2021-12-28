@@ -7,16 +7,19 @@ require_relative "pokedex/skills"
 module Pokedex
   class Error < StandardError; end
   # Your code goes here...
-  def self.Pokemon(name)
-    Pokemon.new.get_pokemon(name)
+  def self.Pokemon(name_or_id)
+    Pokemon.new.pokemon(name_or_id)
   end
-  def self.Pokemon(id)
-    Pokemon.new.get_abilities_pokemons(id)
+
+  def self.Random_pokemon
+    Pokemon.new.random
   end
-  def self.Pokemon(id)
-    Pokemon.new.get_type_pokemons(id)
+
+  def self.Ability_Skills(id)
+    Skills.new.ability(id)
   end
-  def self.Pokemon(name)
-    Pokemon.new.get_random_pokemon
+
+  def self.Type_Skills(id)
+    Skills.new.type(id)
   end
 end
