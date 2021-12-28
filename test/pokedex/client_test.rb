@@ -1,6 +1,7 @@
 
+require "minitest/ruby"
 module Pokedex
-    class ClientTest
+    class ClientTest < Minitest::Test
         def client
             Client.new("https://pokeapi.co/api/v2/pokemon/ditto")
         end

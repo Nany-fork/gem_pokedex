@@ -1,16 +1,22 @@
 module Pokedex
     class Pokemon
         def initialize
-            @client = Client.new("https://pokeapi.co/api/v2")
+            @client = Client.new()
         end
         
-        def get_random_pokemon 
-            client.get("pokemon/#{rand(898)}")
+        def random
+          pokemon(rand(898))
         end
 
-        def get_pokemon(name)
-            client.get("pokemon/#{name}")
+        def pokemon(name_or_id)
+           result =  client.get("pokemon/#{name_or_id}")
+           {name: result['name'], abilities: result['abilities']}
         end
+
+
+
+
+
 
         def get_abilities_pokemons(id)
             if id > 267
