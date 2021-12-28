@@ -4,6 +4,7 @@ require_relative "pokedex/version"
 require_relative "pokedex/client"
 require_relative "pokedex/pokemon"
 require_relative "pokedex/skills"
+require_relative "pokedex/report/report"
 module Pokedex
   class Error < StandardError; end
   # Your code goes here...
