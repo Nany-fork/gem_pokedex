@@ -13,6 +13,10 @@ module Pokedex
     Pokemon.new.pokemon(name_or_id)
   end
 
+  def self.Pokemon_filter(name_or_id, filter)
+    Pokemon.new.pokemon(name_or_id, filter)
+  end
+
   def self.Random_pokemon
     Pokemon.new.random
   end

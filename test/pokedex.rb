@@ -7,8 +7,6 @@ class PokedexTest < Minitest::Test
     refute_nil ::Pokedex::VERSION
   end
 
-
-
   def test_get_ability
     VCR.use_cassette('Ability_Skills') do
       pokemon = Pokedex.Ability_Skills(5)
@@ -27,6 +25,13 @@ class PokedexTest < Minitest::Test
     VCR.use_cassette('Pokemon') do
       pokemon = Pokedex.Pokemon('pikachu')
       assert_instance_of Hash, pokemon
+    end
+  end
+
+  def test_get_pokemon_with_filter
+    VCR.use_cassette('Pokemon_filter') do
+      pokemon = Pokedex.Pokemon_filter('pikachu', 'moves')
+      assert_instance_of Array, pokemon
     end
   end
   
