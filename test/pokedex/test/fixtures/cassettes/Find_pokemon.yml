@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pokeapi.co/api/v2/pokemon/aaaa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - pokeapi.co
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 05 Jan 2022 06:11:38 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '9'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=3600, s-maxage=3600
+      Etag:
+      - W/"9-0gXL1ngzMqISxa6S1zx3F4wtLyg"
+      Function-Execution-Id:
+      - ikfdo6ydmsu4
+      X-Cloud-Trace-Context:
+      - ee62a04a60fa98b6218cffedbe9fd814
+      X-Fh-No-Setcookie-Unroll:
+      - 'true'
+      X-Powered-By:
+      - Express
+      X-Served-By:
+      - cache-dal21224-DAL
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1641363097.847091,VS0,VE1402
+      Vary:
+      - Accept-Encoding, x-fh-requested-host, accept-encoding
+      Cf-Cache-Status:
+      - MISS
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ORQlldMDHh18AIRk5Z1dL7Y2Dlh41SxYOZNv0LKCSNRYUEHgyasgD2bHByJecayPWmwvDHvIgCr3ZcifBuec2Mn6Mi96BRA0ZQfmfpa%2BO4foFG6Hbyo1UBJeWVNQ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6c8a8cda986e521d-MEX
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: UTF-8
+      string: Not Found
+  recorded_at: Wed, 05 Jan 2022 06:11:38 GMT
+recorded_with: VCR 6.0.0

@@ -13,6 +13,10 @@ module Pokedex
     Pokemon.new.pokemon(name_or_id)
   end
 
+  def self.Find_pokemon(letter, numer = 100)
+    Pokemon.new.find_pokemon(letter, numer = 100)
+  end
+
   def self.Pokemon_filter(name_or_id, filter)
     Pokemon.new.pokemon(name_or_id, filter)
   end

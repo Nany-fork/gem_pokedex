@@ -7,6 +7,21 @@ class PokedexTest < Minitest::Test
     refute_nil ::Pokedex::VERSION
   end
 
+
+  def test_fin_pokemon_with_filter
+    VCR.use_cassette('Find_pokemon') do
+      pokemon = Pokedex.Find_pokemon('p', 300)
+      assert_instance_of Array, pokemon
+    end
+  end
+
+  def test_find_pokemon_with_filter_equal
+    VCR.use_cassette('Find_pokemon') do
+      pokemon = Pokedex.Find_pokemon('z')
+      assert_equal ["zubat"], pokemon
+    end
+  end
+
   def test_get_ability
     VCR.use_cassette('Ability_Skills') do
       pokemon = Pokedex.Ability_Skills(5)

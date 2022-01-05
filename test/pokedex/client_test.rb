@@ -1,14 +1,24 @@
 # frozen_string_literal: true
 
-require 'minitest/ruby'
+
+require '../test_helper'
+
 module Pokedex
   class ClientTest < Minitest::Test
     def client
-      Client.new('https://pokeapi.co/api/v2/pokemon/ditto')
+      Client.new
     end
 
     def test_Client_class_exist
-      refute_nil Client.new('https://pokeapi.co/api/v2/pokemon/ditto')
+      refute_nil Client.new
     end
+
+    # def test_rescue_exceptions
+    #   VCR.use_cassette('Get_exception_pokemon') do
+    #     pokemon = Pokedex::Client.new
+    #     pokemon.get('pokemon/dittos')
+    #     assert_raise ["zubat"], pokemon
+    #   end
+    # end
   end
 end

@@ -6,26 +6,31 @@ module Pokedex
       @array = []
     end
 
-    def filter_pokemon(result, filter)
-      if filter.nil?
-        { name: result['name'], abilities: result['abilities'] }
+    def filter_pokemon(result, key )
+      if key
+        filter(result, key)
       else
-        result[filter.to_s].each do |i|
-          @array.push(i)
-        end
-        @array
+        { name: result['name'], abilities: result['abilities'] }
       end
     end
 
-    def filter_skills(result, filter)
-      if filter.nil?
-        { name: result['name'], pokemon: result['pokemon'] }
+    def filter_skills(result, key )
+      if key
+        filter(result, key)
       else
-        result[filter.to_s].each do |i|
-          @array.push(i)
+        { name: result['name'], pokemon: result['pokemon'] }
         end
-        @array
       end
+
+
+    def filter(result, key)
+      result[key.to_s].each do |i|
+        @array.push(i)
+      end
+      @array
     end
+    
+   
+    
   end
 end
